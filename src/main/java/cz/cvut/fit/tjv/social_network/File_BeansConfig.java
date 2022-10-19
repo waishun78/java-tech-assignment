@@ -13,7 +13,7 @@ import java.nio.file.Path;
 
 @Configuration
 public class File_BeansConfig {
-    final Path p = Path.of("storage/t.tmp");
+    final Path p = Path.of("storage/t");
 
     @Bean
     public User user() {
