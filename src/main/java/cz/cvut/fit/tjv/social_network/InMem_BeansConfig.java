@@ -12,15 +12,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class InMem_BeansConfig {
 
-    @Bean
-    public User user() {
-        return new User("john");
-    }
+//    @Bean
+//    public User user() {
+//        return new User("john");
+//    }
+//
+//    @Bean
+//    public Post post() {
+//        return new Post((long) 1241,null, this.user(),"something");
+//    }
 
-    @Bean
-    public Post post() {
-        return new Post((long) 1241,null, this.user(),"something");
-    }
     @Bean
     public UserInMemRepository userInMemRepository() {
         return new UserInMemRepository();

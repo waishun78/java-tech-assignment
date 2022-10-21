@@ -60,14 +60,16 @@ public class TestSNBackend {
 
         }
 
-        var usr = ctx.getBean(User.class);
-        var post = ctx.getBean(Post.class);
+//        var usr = ctx.getBean(User.class);
+//        var post = ctx.getBean(Post.class);
         var usrSvc = ctx.getBean("userService", UserService.class);
         var mediaSvc = ctx.getBean(MediaPartService.class);
         var postSvc = ctx.getBean(PostService.class);
 
         // Testing Functionality
-        usrSvc.create(usr);
+        User user = new User("1");
+        usrSvc.create(user);
+        Post post = new Post((long) 1241,null, user,"something");
         postSvc.create(post);
         System.out.println("Initial listing of");
         System.out.println("Users:");
