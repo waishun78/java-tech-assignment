@@ -14,16 +14,6 @@ public class File_BeansConfig {
     final Path p = Path.of("storage/txt");
 
     @Bean
-    public User user() {
-        return new User("john");
-    }
-
-    @Bean
-    public Post post() {
-        return new Post((long) 1241,null, this.user(),"something");
-    }
-
-    @Bean
     public UserFileRepository userFileRepository() {
         return new UserFileRepository(this.p);
     }
